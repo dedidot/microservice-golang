@@ -1,0 +1,13 @@
+### Send POST request with json body
+POST http://localhost:8080/handle
+Content-Type: application/json
+
+{
+  "action": "mail",
+  "mail": {
+    "from": "a@mail.com",
+    "to": "waka@mail.com",
+    "subject": "subject ni",
+    "message": "message ni"
+  }
+}
