@@ -54,6 +54,9 @@ func main() {
 	//rpcSer := RPCServer{client: mongoClient}
 	_ = rpc.Register(new(RPCServer))
 
+	// gRPC Connection
+	go app.gRPCListen()
+
 	// Start webserver
 	log.Println("Starting service on port", webPort)
 	srv := &http.Server{
